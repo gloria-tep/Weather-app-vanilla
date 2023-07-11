@@ -1,5 +1,4 @@
 let now = new Date();
-
 let days = [
   "Sunday",
   "Monday",
