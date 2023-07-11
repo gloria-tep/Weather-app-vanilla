@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="container">
+      <form id="search-form">
+        <div class="row">
+          <div class="col-6">
+            <input
+              type="text"
+              placeholder="Search for city"
+              autocomplete="off"
+              autofocus="on"
+              id="search-city"
+              class="searchCity"
+            />
+          </div>
+          <div class="col-3">
+            <input class="button" type="submit" value="Search" />
+          </div>
+          <div class="col-3">
+            <button id="currentBtn">Current</button>
+          </div>
+        </div>
+      </form>
+      <h1 id="city">Sydney NSW, Australia</h1>
+      <ul>
+        <li id="date">saturday 09:15</li>
+        <li id="description">Partly cloudy</li>
+      </ul>
+      <div class="row">
+        <div class="col-6">
+          <div class="float-left">
+            <img
+              src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/1024px/2601.png"
+            />
+            <span class="temperature" id="temperature"> 19°c </span>
+            <span class="units">
+              <a href="#" id="celcius-link"> °C </a>
+              |
+              <a href="#" id="ferhenheit-link">°F</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <ul class="extras">
+          <li>Humidity: <span id="humidity"></span>%</li>
+          <li>Wind: <span id="wind"> </span>km/hr</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
