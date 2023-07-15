@@ -69,13 +69,6 @@ function searchLocation(position) {
   console.log(apiUrl);
 }
 
-function getCurrentLocation(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation);
-}
-
-let currentLocationButton = document.querySelector("#currentBtn");
-currentLocationButton.addEventListener("click", getCurrentLocation);
 let celciusTemperature = null;
 function convertToFahrenheit(event) {
   event.preventDefault();
@@ -98,4 +91,4 @@ function convertToCelcius(event) {
 let celciusElement = document.querySelector("#celcius-link");
 celciusElement.addEventListener("click", convertToCelcius);
 
-searchCity("New York");
+searchCity("London");
