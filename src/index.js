@@ -24,6 +24,31 @@ function formatDate(timestamp) {
 
   return `${day} ${hours}:${minutes}`;
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Wed", "Thur", "Fri", "sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+            <div class="weather-forecast-date">${day}</div>
+        <img src="https://openweathermap.org/img/wn/02d@2x.png"
+          class="forecast-icon"
+            />
+            <div class="weather-forecast-temperature">
+              <span class="temperature-min"> 18°</span>
+              <span class="temperature-max">25°</span>
+            </div>
+          </div>
+        `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -92,3 +117,4 @@ let celciusElement = document.querySelector("#celcius-link");
 celciusElement.addEventListener("click", convertToCelcius);
 
 searchCity("London");
+displayForecast();
