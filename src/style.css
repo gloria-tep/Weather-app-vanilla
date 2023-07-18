@@ -10,6 +10,7 @@ body {
   padding: 15px 10px;
   background: #5397e2;
   color: whitesmoke;
+  opacity: 0.8;
 }
 form {
   padding-left: 10px;
