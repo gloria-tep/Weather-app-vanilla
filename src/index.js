@@ -119,26 +119,4 @@ function searchLocation(position) {
   console.log(apiUrl);
 }
 
-let celciusTemperature = null;
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  celciusElement.classList.remove("active");
-  ferhenheitElement.classList.add("active");
-  let ferhenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(ferhenheitTemperature);
-}
-let ferhenheitElement = document.querySelector("#ferhenheit-link");
-ferhenheitElement.addEventListener("click", convertToFahrenheit);
-
-function convertToCelcius(event) {
-  event.preventDefault();
-  celciusElement.classList.add("active");
-  ferhenheitElement.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
-}
-let celciusElement = document.querySelector("#celcius-link");
-celciusElement.addEventListener("click", convertToCelcius);
-
 searchCity("London");
